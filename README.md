@@ -9,8 +9,8 @@
  - Django REST framework 3.14.0
  - PostgreSQL
 
-## Passos para a criação
- 1. Instale o venv:
+## Passos que foi utilizado para a criação desse projeto:
+ 1. Instale o venv(se não tiver instalado):
   ```bash
 pip install venv
 ```
@@ -43,8 +43,16 @@ django-admin startproject config .
 LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
 ```
+ 7. No terminal, rode o comando abaixo para criar a pasta que contém os arquivos models, views, templates, etc.:
+ ```bash
+ python manage.py startapp escola
+ ```
 
 ## Avisos
+ - Para criar um super usuário, digite o seguinte comando e siga os passos:
+ ```bash
+ python manage.py createsuperuser
+ ```
  - Quando fizer novos models ou quando trocar de banco de dados, deve se rodar os comandos abaixo:
  ```bash
  python manage.py makemigrations # Django cria o banco de dados e as migrations, mas não realmente aplica as alterações no banco de dados.
@@ -63,3 +71,4 @@ TIME_ZONE = 'America/Sao_Paulo'
     }
 }
  ```
+
