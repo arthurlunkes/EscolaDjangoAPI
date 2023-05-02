@@ -41,8 +41,21 @@ TIME_ZONE = 'America/Sao_Paulo'
 ```
 
 ## Avisos
- - Quando fizer novos models, deve se rodar os comandos abaixo:
+ - Quando fizer novos models ou quando trocar de banco de dados, deve se rodar os comandos abaixo:
  ```bash
  python manage.py makemigrations # Django cria o banco de dados e as migrations, mas não realmente aplica as alterações no banco de dados.
  python manage.py migration # Aplica as alterações no banco de dados.
+ ```
+ - Para utilizar seu próprio banco de dados, altere as configurações do arquivo settings.py, de acordo com a documentação [Django Databases](https://docs.djangoproject.com/en/4.2/ref/databases/):
+ ```python
+ DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
+}
  ```
