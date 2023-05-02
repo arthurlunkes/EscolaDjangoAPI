@@ -1,9 +1,13 @@
 # Primeira API utilizando Django
 
 ## Descrição
- API REST feita com Django com acesso ao banco de dados com operações CRUD.
+ API RESTful criada utilizando Django REST framework e PostgreSQL.
  
 ## O que foi utilizado nesse projeto
+ - Python 3.11
+ - Django 4.2
+ - Django REST framework 3.14.0
+ - PostgreSQL
 
 ## Passos para a criação
  1. Instale o venv:
