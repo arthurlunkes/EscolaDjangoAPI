@@ -14,26 +14,35 @@ pip install venv
   ```bash
 python3 -m venv ./venv
 ```
- 3. ative o venv(esse comando para linux/mac):
+ 3. ative o venv:
+  - Comando para linux/mac:
   ```bash
 source venv/bin/activate
 ```
- 4. ative o venv(esse comando para windows):
+  - Comando para windows:
   ```shell
 venv\Scripts\activate.bat
 ```
- 5. Instale o Django no ambiente virtualizado:
+
+ 4. Instale o Django no ambiente virtualizado:
   ```bash
 pip install django
 ```
 
- 6. Crie um projeto chamado config:
+ 5. Crie um projeto chamado config:
   ```bash
 django-admin startproject config .
 ```
 
- 7. Na pasta config, altere no arquivo settings.py o idioma e o horário:
+ 6. Na pasta config, altere no arquivo settings.py o idioma e o horário:
   ```python
 LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
 ```
+
+## Avisos
+ - Quando fizer novos models, deve se rodar os comandos abaixo:
+ ```bash
+ python manage.py makemigrations # Django cria o banco de dados e as migrations, mas não realmente aplica as alterações no banco de dados.
+ python manage.py migration # Aplica as alterações no banco de dados.
+ ```
